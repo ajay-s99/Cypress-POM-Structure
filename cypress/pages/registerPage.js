@@ -33,6 +33,7 @@ class registerPage {
     cy.get(this.continue).should("be.enabled").click();
   }
   errorMessage() {
+    // Verifying error message
     cy.get("div[class='alert alert-danger alert-dismissible']")
     .should("have.text"," Warning: You must agree to the Privacy Policy!");
   }
@@ -40,6 +41,7 @@ class registerPage {
     cy.get("input[type='checkbox']").click();
   }
   confirmationMessge() {
+    // Printing text which is present on webpage.
     cy.get("h1")
       .invoke("text")
       .then(($message) => {
