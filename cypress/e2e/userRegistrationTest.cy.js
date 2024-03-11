@@ -2,12 +2,12 @@ import registerPage from "../pages/registerPage";
 
 describe("User registration flow", () => {
   const registobjects = new registerPage();
-
-  it("Launch register url", () => {
-    cy.visit(Cypress.env("URL"));
-  });
+  beforeEach(function () {
+    cy.visit(Cypress.env('URL'))
+  })
 
   it("Registration flow", () => {
+    cy.visit(Cypress.env('URL'))
     cy.fixture("registrationDetails").then((data) => {
       registobjects.firstNameField(data.FirstName);
       registobjects.lastNameField(data.LastName);
@@ -17,6 +17,4 @@ describe("User registration flow", () => {
       registobjects.confirmPasswordField(data.ConfirmPassword);
     });
   });
-
-  registobjects.firstName;
 });

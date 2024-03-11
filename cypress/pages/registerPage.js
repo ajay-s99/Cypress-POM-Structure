@@ -2,7 +2,7 @@ class registerPage {
   firstName = "#input-firstname";
   lastName = "#input-lastname";
   email = "#input-email";
-  telephone = "#input-telephone";
+  telePhone = "#input-telephone";
   password = "#input-password";
   passwordConfirm = "#input-confirm";
   policyCheckbox = 'input[type="checkbox"]';
