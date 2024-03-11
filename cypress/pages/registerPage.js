@@ -18,7 +18,7 @@ class registerPage {
     cy.get(this.email).type(Email);
   }
   telephoneField(Phn) {
-    cy.get(this.telephone).type(Phn);
+    cy.get(this.telePhone).type(Phn);
   }
   passwordField(Pwd) {
     cy.get(this.password).type(Pwd);
@@ -30,7 +30,21 @@ class registerPage {
     cy.get(this.policyCheckbox).check();
   }
   continueButton() {
-    cy.get(this.continue).click();
+    cy.get(this.continue).should("be.enabled").click();
+  }
+  errorMessage() {
+    cy.get("div[class='alert alert-danger alert-dismissible']")
+    .should("have.text"," Warning: You must agree to the Privacy Policy!");
+  }
+  checkBox() {
+    cy.get("input[type='checkbox']").click();
+  }
+  confirmationMessge() {
+    cy.get("h1")
+      .invoke("text")
+      .then(($message) => {
+        cy.log($message);
+      });
   }
 }
 export default registerPage;
