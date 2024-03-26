@@ -1,8 +1,8 @@
 {
-    "FirstName": "John",
-    "LastName":"Wick",
-    "Email":"johnwick1@yopmail.com",
-    "Contact":"15166184623",
-    "Password":"John@123",
-    "ConfirmPassword":"John@123"
+    "firstName": "John",
+    "lastName":"Wick",
+    "email":"johnwick1@yopmail.com",
+    "contact":"15166184623",
+    "password":"John@123",
+    "confirmPassword":"John@123"
 }

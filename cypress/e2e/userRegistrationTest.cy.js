@@ -1,24 +1,24 @@
 import registerPage from "../pages/registerPage";
 
 describe("User registration flow", () => {
-  const registorbjects = new registerPage();
+  const registerObjects = new registerPage();
   beforeEach(function () {
     cy.visit(Cypress.env("URL"));
   });
   it("Registration flow", () => {
     cy.visit(Cypress.env("URL"));
     cy.fixture("registrationDetails").then((data) => {
-      registorbjects.firstNameField(data.FirstName);
-      registorbjects.lastNameField(data.LastName);
-      registorbjects.emailField(data.Email);
-      registorbjects.telephoneField(data.Contact);
-      registorbjects.passwordField(data.Password);
-      registorbjects.confirmPasswordField(data.ConfirmPassword);
-      registorbjects.continueButton();
-      registorbjects.errorMessage();
-      registorbjects.checkBox();
-      registorbjects.continueButton();
-      registorbjects.confirmationMessge();
+      registerObjects.firstNameField(data.firstName);
+      registerObjects.lastNameField(data.lastName);
+      registerObjects.emailField(data.email);
+      registerObjects.telephoneField(data.contact);
+      registerObjects.passwordField(data.password);
+      registerObjects.confirmPasswordField(data.confirmPassword);
+      registerObjects.continueButton();
+      registerObjects.errorMessage();
+      registerObjects.checkBox();
+      registerObjects.continueButton();
+      registerObjects.confirmationMessge();
     });
   });
 });
